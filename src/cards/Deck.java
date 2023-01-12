@@ -12,10 +12,10 @@ public class Deck {
     public Deck(){
         this.deck = new LinkedList<>();
         for (int i = 0; i < Constants.SUIT.length; i++) {
-            String suit = Constants.SUIT[i];  //now that we have to suit, loop through values
+            String suit = Constants.SUIT[i];  //now that we have the suit, loop through values
             for (int j = 0; j < Constants.VALUES.length; j++) {
                 Integer value = Constants.VALUES[j];
-                String name = Constants.NAME[j]; //now we have all three values
+                String name = Constants.NAME[j]; //now we have values for all three constants
                 Card card = new Card(suit, value, name);
                 deck.add(card);
             }
@@ -39,5 +39,4 @@ public class Deck {
     public String toString(){
         return "Deck [deck=" + deck + "]";
     }
-    
 }
